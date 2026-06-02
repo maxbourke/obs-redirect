@@ -30,15 +30,18 @@
 </style>
 </head>
 <body>
-<a class="btn" href="obsidian://open?vault=mb%20Obsidian%20Vault&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications">
+<a class="btn" id="obslink" href="obsidian://open?vault=mb%20Obsidian%20Remote&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications">
   Open in Obsidian
 </a>
 <p>Job Prospecting / Email Notifications</p>
 <script>
-  // Auto-redirect on desktop (non-touch devices)
+  // Desktop (non-touch): use the local vault name
   if (!('ontouchstart' in window)) {
+    document.getElementById('obslink').href =
+      "obsidian://open?vault=mb%20Obsidian%20Vault&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications";
     window.location = "obsidian://open?vault=mb%20Obsidian%20Vault&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications";
   }
+  // Mobile: button href already points to mb Obsidian Remote
 </script>
 </body>
 </html>
