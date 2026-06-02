@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Opening Obsidian...</title>
-<script>
-  window.location = "obsidian://open?vault=mb%20Obsidian%20Vault&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications";
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open in Obsidian</title>
+<style>
+  body {
+    font-family: -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #1e1e2e;
+    color: #cdd6f4;
+  }
+  a.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #7c3aed;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 16px;
+  }
+  p { color: #a6adc8; font-size: 14px; margin-top: 24px; }
+</style>
 </head>
 <body>
-<p>Opening Obsidian...</p>
-<p><a href="obsidian://open?vault=mb%20Obsidian%20Vault&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications">Tap here if it doesn't open automatically</a></p>
+<a class="btn" href="obsidian://open?vault=mb%20Obsidian%20Vault&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications">
+  Open in Obsidian
+</a>
+<p>Job Prospecting / Email Notifications</p>
+<script>
+  // Auto-redirect on desktop (non-touch devices)
+  if (!('ontouchstart' in window)) {
+    window.location = "obsidian://open?vault=mb%20Obsidian%20Vault&file=PROJECTS%2FJob%20Prospecting%2FEmail%20Notifications";
+  }
+</script>
 </body>
 </html>
